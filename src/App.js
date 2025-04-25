@@ -4,7 +4,7 @@ import {
   PieChartOutlined,
 } from '@ant-design/icons';
 import React, { useState } from 'react';
-import { Button, Layout, Menu } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,10 +25,10 @@ import UseCallbackDemo from './UseCallback';
 import UseRefDemo from './UseRef';
 import UseImperativeHandleDemo from './UseImperativeHandle';
 import SuspenseDemo from './Suspense';
+import ReduxExample from './Redux';
 
 function AppContent() {
   const { Header, Footer, Sider, Content } = Layout;
-  const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -53,6 +53,7 @@ function AppContent() {
     getItem('useRef', 'useRef', <ContainerOutlined />),
     getItem('suspense', 'suspense', <ContainerOutlined />),
     getItem('forwardRef', 'forwardRef', <ContainerOutlined />),
+    getItem('redux', 'redux', <ContainerOutlined />),
   ];
 
   const handleMenuClick = ({ key }) => {
@@ -80,7 +81,6 @@ function AppContent() {
               selectedKeys={[location.pathname.slice(1)]}
               mode="inline"
               theme="light"
-              inlineCollapsed={collapsed}
               items={items}
               onClick={handleMenuClick}
             />
@@ -109,6 +109,8 @@ function AppContent() {
               <Route path="/useRef" element={<UseRefDemo />} />
               <Route path="/suspense" element={<SuspenseDemo />} />
               <Route path="/forwardRef" element={<UseImperativeHandleDemo />} />
+              <Route path="/redux" element={<ReduxExample />} />
+
               <Route path="/" element={<UseStateDemo />} />
             </Routes>
           </Content>
