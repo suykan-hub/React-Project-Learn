@@ -122,7 +122,7 @@ function AppContent() {
             }}
           >
             <div className="footer">
-              2025 杭州深度求索人工智能基础技术研究有限公司 版权所有
+              React + Ant Design Vue Demo ©2024 Created by suykan
             </div>
           </Footer>
         </Layout>
