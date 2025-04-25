@@ -1,0 +1,61 @@
+.context-demo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  font-size: 24px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.role {
+  color: #666;
+  font-size: 14px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.content-section {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+} 

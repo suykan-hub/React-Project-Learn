@@ -1,0 +1,61 @@
+.layout-effect-demo {
+  padding: 20px;
+}
+
+.measure-container {
+  border: 2px solid #1890ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.measurement-results {
+  background-color: #f0f2f5;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.measurement-results p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #1890ff;
+}
+
+.test-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.test-content.expanded {
+  background-color: #e6f7ff;
+}
+
+.extra-content {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.toggle-button {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #40a9ff;
+}
+
+h2 {
+  color: #1890ff;
+  margin-bottom: 20px;
+} 
