@@ -29,6 +29,7 @@ function MemoExample() {
     return result;
   };
 
+  // 使用 useMemo 缓存计算结果，只有当 numbers 变化时才重新计算
   const factorialSum = useMemo(() => {
     console.log('重新计算阶乘之和');
     return numbers.reduce((sum, num) => sum + calculateFactorial(num), 0);
@@ -67,6 +68,7 @@ function MemoExample() {
 
       {/* 示例 1: 展示复杂计算的结果 */}
       <section className="example-section">
+        {numbers.join(',')}
         <h3>示例 1: 复杂计算缓存</h3>
         <p>数组中所有数字的阶乘之和: {factorialSum}</p>
         <button onClick={addNumber}>添加随机数字</button>

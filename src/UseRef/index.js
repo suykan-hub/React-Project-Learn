@@ -122,7 +122,7 @@ function UseRefExample() {
 
       {/* 示例 4: 跨渲染周期保存值 */}
       <section className="example-section">
-        <h3>示例 4: 跨渲染周期保存值</h3>
+        <h3>示例 4: 跨渲染周期保存值{  clickCountRef.current}</h3>
         <button onClick={handleClick}>点击我 (查看控制台输出)</button>
         <p className="note">提示：点击次数保存在 ref 中，更新不会触发重渲染</p>
       </section>

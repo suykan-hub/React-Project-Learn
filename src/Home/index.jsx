@@ -21,6 +21,7 @@ import {
   Footer10DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
+import Mentions, { Option } from 'suy-mentions';
 
 let isMobile;
 enquireScreen((b) => {

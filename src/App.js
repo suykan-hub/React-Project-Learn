@@ -26,6 +26,10 @@ import UseRefDemo from './UseRef';
 import UseImperativeHandleDemo from './UseImperativeHandle';
 import SuspenseDemo from './Suspense';
 import ReduxExample from './Redux';
+import MetionsExample from './Metions';
+import RcMetionsExample from './RcMetions/index.tsx';
+import SuyMentionsExample from './suyMentions';
+import EditableProTable from './EditableProTable';
 
 function AppContent() {
   const { Header, Footer, Sider, Content } = Layout;
@@ -43,6 +47,8 @@ function AppContent() {
   }
 
   const items = [
+    getItem('suy-mentions', 'suy-mentions', <PieChartOutlined />),
+    getItem('editable', 'editable', <PieChartOutlined />),
     getItem('useState', 'useState', <PieChartOutlined />),
     getItem('useEffect', 'useEffect', <DesktopOutlined />),
     getItem('useLayoutEffect', 'useLayoutEffect', <ContainerOutlined />),
@@ -54,6 +60,8 @@ function AppContent() {
     getItem('suspense', 'suspense', <ContainerOutlined />),
     getItem('forwardRef', 'forwardRef', <ContainerOutlined />),
     getItem('redux', 'redux', <ContainerOutlined />),
+    getItem('metions', 'metions', <ContainerOutlined />),
+    getItem('rcMetions', 'rcMetions', <ContainerOutlined />),
   ];
 
   const handleMenuClick = ({ key }) => {
@@ -96,6 +104,8 @@ function AppContent() {
             }}
           >
             <Routes>
+              <Route path="/editable" element={<EditableProTable />} />
+              <Route path="/suy-mentions" element={<SuyMentionsExample />} />
               <Route path="/useState" element={<UseStateDemo />} />
               <Route path="/useEffect" element={<UseEffectDemo />} />
               <Route
@@ -110,7 +120,8 @@ function AppContent() {
               <Route path="/suspense" element={<SuspenseDemo />} />
               <Route path="/forwardRef" element={<UseImperativeHandleDemo />} />
               <Route path="/redux" element={<ReduxExample />} />
-
+              <Route path="/metions" element={<MetionsExample />} />
+              <Route path="/rcMetions" element={<RcMetionsExample />} />
               <Route path="/" element={<UseStateDemo />} />
             </Routes>
           </Content>
