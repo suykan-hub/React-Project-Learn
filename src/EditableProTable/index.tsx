@@ -26,7 +26,7 @@ const defaultData: DataSourceType[] = new Array(20).fill(1).map((_, index) => {
   };
 });
 
-const index: React.FC = () => {
+const EditableProTableDemo: React.FC = () => {
   const [editableKeys, setEditableRowKeys] = useState<React.Key[]>(() =>
     defaultData.map((item) => item.id)
   );
@@ -154,4 +154,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default EditableProTableDemo;

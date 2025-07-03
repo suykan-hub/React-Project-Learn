@@ -29,7 +29,7 @@ import ReduxExample from './Redux';
 import MetionsExample from './Metions';
 import RcMetionsExample from './RcMetions/index.tsx';
 import SuyMentionsExample from './suyMentions';
-import EditableProTable from './EditableProTable';
+import EditableProTable from './EditableProTable/index.tsx';
 
 function AppContent() {
   const { Header, Footer, Sider, Content } = Layout;
