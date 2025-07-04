@@ -122,9 +122,24 @@ function UseRefExample() {
 
       {/* 示例 4: 跨渲染周期保存值 */}
       <section className="example-section">
-        <h3>示例 4: 跨渲染周期保存值{  clickCountRef.current}</h3>
+        <h3>示例 4: 跨渲染周期保存值{clickCountRef.current}</h3>
         <button onClick={handleClick}>点击我 (查看控制台输出)</button>
         <p className="note">提示：点击次数保存在 ref 中，更新不会触发重渲染</p>
+      </section>
+
+      <section className="example-section">
+        <h3>
+          提问：为什么previousCountRef.current
+          会更新显示，而clickCountRef.current 没有触发更新
+        </h3>
+        6. 总结
+        <h5>
+          previousCountRef.current 会更新显示，是因为 count
+          状态改变触发了重新渲染 clickCountRef.current
+          不会更新显示，是因为没有状态改变触发重新渲染 useRef
+          本身永远不会触发重新渲染，它只是"搭便车"在其他状态变化时更新显示
+          这就是为什么两个 ref 在页面上的表现不同的根本原因！
+        </h5>
       </section>
     </div>
   );

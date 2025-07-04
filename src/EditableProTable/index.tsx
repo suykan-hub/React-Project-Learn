@@ -16,7 +16,7 @@ type DataSourceType = {
   children?: DataSourceType[];
 };
 
-const defaultData: DataSourceType[] = new Array(20).fill(1).map((_, index) => {
+const defaultData: DataSourceType[] = new Array(10).fill(1).map((_, index) => {
   return {
     id: (Date.now() + index).toString(),
     title: `活动名称${index}`,
